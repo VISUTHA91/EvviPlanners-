@@ -37,6 +37,8 @@ import blackfloral from './black-floral.png'
 import floral from './floral.png'
 import blue from './blue.png'
 import purple from './purple.png'
+import admin from './admin.png'
+// import logout from './logout.png'
 
 
 export {
@@ -74,4 +76,6 @@ blackfloral,
 floral,
 purple,
 blue,
+admin,
+// logout,
 }

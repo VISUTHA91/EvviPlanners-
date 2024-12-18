@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import the hook
+
 
 const Modal = ({ isOpen, onClose, handleStepChange, subtotal, shippingFees, grandTotal}) => {
   if (!isOpen) return null;
@@ -13,6 +15,8 @@ const Modal = ({ isOpen, onClose, handleStepChange, subtotal, shippingFees, gran
     state: "",
     pincode: "",
   });
+  const navigate = useNavigate(); // Initialize the navigation function
+
 
 
   const [orderCompleted, setOrderCompleted] = useState(false);
@@ -20,6 +24,7 @@ const Modal = ({ isOpen, onClose, handleStepChange, subtotal, shippingFees, gran
   const handleConfirmPayment = () => {
     // Simulate payment confirmation
     setOrderCompleted(true);
+
   };
 
   const handleOtpVerification = () => {
@@ -219,8 +224,10 @@ const Modal = ({ isOpen, onClose, handleStepChange, subtotal, shippingFees, gran
             Thank you for your purchase. Your order is on its way!
           </p>
           <button
-            onClick={() => setOrderCompleted(false)}
-            className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg shadow-lg transition ease-in-out duration-300"
+            onClick={() => {setOrderCompleted(false)
+            navigate("/")}} // Redirect to the home page
+
+            className="mt-6 w-full bg-[#375E90] hover:bg-[#222c59] text-white py-2 px-4 rounded-lg shadow-lg transition ease-in-out duration-300"
           >
             Back to Home
           </button>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { adminlogin } from '../../assets/Image';
+import { admin } from '../../assets/Image';
 import { MdEmail } from "react-icons/md";
 import { FaUnlock } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -10,12 +10,10 @@ import { useNavigate } from 'react-router-dom';
     password:"admin123"
  }
 
-
-
 function AdminLogin() {
     const [user, setUser] = useState({
-        email: "",
-        password: ""
+        email: "admin@mail.com",
+        password: "admin123"
       });
     
       const navigate = useNavigate()
@@ -28,7 +26,7 @@ function AdminLogin() {
       };
     
     
-      const registerUser = async (e) => {
+      const adminLogin = async (e) => {
         e.preventDefault();
         try {
         //   const data = await apiCalls.userLogin(user); // Correctly passing the 'user' object
@@ -100,21 +98,20 @@ function AdminLogin() {
 {/* <div className="flex h-screen items-center justify-center bg-gradient-to-b from-sky-400 to-sky-200"> */}
 <div className="flex h-screen items-center justify-center bg-gradient-to-r from-orange-300 to-rose-300">
       {/* Image and Form Container */}
-      <div className="w-full max-w-md p-1 mt-10 mb-16 rounded-lg shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
+      <div className="w-full max-w-md p-1 mt-6 mb-16 rounded-lg shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
         {/* Image Section */}
         <div className="flex items-center justify-center opacity-900">
           <img
-            src={adminlogin}
+            src={admin}
             alt="AdminLogin"
-            className="rounded-lg object-fit h-56 w-34"
+            className="rounded-lg object-fit h-44 w-34 bg-gray-20"
           />
         </div>
         {/* Form Section */}
         <div className="p-4">
           <h2 className="text-2xl font-bold text-center text-gray-800">Welcome</h2>
           <p className="mt-2 text-center text-gray-600">Login to your account</p>
-
-          <form className="space-y-4 mt-2" onSubmit={registerUser}>
+          <form className="space-y-4 mt-2" onSubmit={adminLogin}>
             {/* Email Input */}
             <div className="relative">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">

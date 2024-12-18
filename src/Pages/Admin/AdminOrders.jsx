@@ -48,8 +48,8 @@ const  AdminOrders = () => {
   };
 
   return (
-    <div className=" h-full pt-10 p-6">
-      <h1 className="text-2xl font-bold text-gray-800  mt-10 mb-6">My Orders</h1>
+    <div className=" h-full pt-2 mb-10">
+      <h1 className="text-2xl font-bold text-gray-800  mt-2 mb-6"> Orders Details</h1>
       <div className="bg-white rounded-lg shadow-md p-4">
         <table className="min-w-full table-auto">
           <thead>

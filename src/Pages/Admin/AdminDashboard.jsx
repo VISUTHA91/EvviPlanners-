@@ -11,6 +11,9 @@ import { GoPlus } from "react-icons/go";
 import { GrProductHunt } from "react-icons/gr";
 import { FaFirstOrder } from "react-icons/fa";
 import { MdReviews } from "react-icons/md";
+import { TbLogout2 } from "react-icons/tb";
+import ProductCreate from './ProductCreate';
+
 
 function AdminDashboard() {
 
@@ -22,6 +25,8 @@ function AdminDashboard() {
         return <MainContent />;
       case 'Category':
         return <AdminCategory />;
+        case 'ProductCreate':
+        return <ProductCreate />;
       case 'Products':
         return <AdminProductList />;
       case 'Users':
@@ -34,10 +39,10 @@ function AdminDashboard() {
   };
   return (
     <>
-     <div className="flex h-full">
+     <div className="flex">
       {/* Side Content */}
       <div className="w-58">
-<div className="w-64 h-full bg-white p-8 shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
+<div className="w-64 h-full bg-white p-4 shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
 {/* <div className="w-64 h-screen bg-[#375E90] text-white p-6 shadow-lg"> */}
   <ul className="space-y-6">
     {/* Dashboard */}
@@ -65,7 +70,7 @@ function AdminDashboard() {
     {/* Create Product */}
     <li>
       <button
-        onClick={() => setCurrentPage("Products")}
+        onClick={() => setCurrentPage("ProductCreate")}
         className="flex items-center gap-4 w-full p-2 text-lg font-semibold text-blue-600 rounded-lg hover:bg-blue-100 hover:text-blue-800 transition duration-200"
       >
         <GrProductHunt className="text-2xl" />
@@ -105,6 +110,17 @@ function AdminDashboard() {
         Customers
       </button>
     </li>
+    <li>
+    <button
+        onClick={() => setCurrentPage("Users")}
+        className="flex items-center gap-4 w-full p-2 text-lg font-semibold text-blue-600 rounded-lg hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+      >
+        {/* <HiOutlineUserGroup className="text-2xl" /> */}
+        <TbLogout2 className="text-2xl" />
+        LogOut
+      </button>
+    </li>
+   
   </ul>
 </div>
 </div>
@@ -114,7 +130,7 @@ function AdminDashboard() {
 
 
       {/* Main Content */}
-      <div className='mt-10 ml-16 h-full'>
+      <div className='mt-10 ml-16'>
         {renderPageContent()}
       </div>
 

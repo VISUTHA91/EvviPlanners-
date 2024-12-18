@@ -25,14 +25,10 @@ export default {
      animation: {
       "spin-custom": "spinCustom 30s linear infinite",
       'bounce-out': 'bounce-out 0.5s ease-out forwards',
-      flash: 'flash 1s infinite',
-
-
+     ' flash': 'flash 1s infinite',
     },
     keyframes: {
-      spinCustom: {
-        "100%": { transform: "rotate(360deg)" },
-      },
+      spinCustom: {"100%": { transform: "rotate(360deg)" }},
       'bounce-out': {
         '0%': { transform: 'scale(1)', opacity: '1' },
         '20%': { transform: 'scale(1.1)', opacity: '1' },
@@ -42,12 +38,23 @@ export default {
         '0%, 100%': { opacity: 1 },
         '50%': { opacity: 0 },
       },
+      rotateY: {
+        '0%': { transform: 'rotateY(90deg)' },
+        '80%': { transform: 'rotateY(-10deg)' },
+        '100%': { transform: 'rotateY(0)' },
+      },
     },
-    colors: {
-      'rotatebg': '#eee8e2',
+
+
+    animation: {
+      rotateY: 'rotateY 800ms ease-in-out forwards',
     },
-    },
-  },
+    colors: {'rotatebg': '#eee8e2'},
+
+
+
+
+
   plugins: [
     require('tailwind-clip-path'),
     plugin(function ({ addUtilities }) {
@@ -57,6 +64,9 @@ export default {
         },
       });
     }),
-  ],
+  ]
+}
+  }
 }
 
+  

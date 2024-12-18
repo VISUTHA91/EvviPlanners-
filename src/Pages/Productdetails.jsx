@@ -201,12 +201,12 @@ function Productdetails() {
               <button
                 onClick={() => addToCart()}
                 // onClick={() => buyNow()}
-                className=" border border-black border-2 rounded-lg hover:bg-red-600 hover:text-white transition lg:w-36 p-2">
+                className=" border border-black border-2 rounded-lg hover:bg-[#222c59] hover:text-white transition lg:w-36 p-2">
                 Add To Cart
               </button>
               <Link to={'/payment'}
                 // onClick={() => addToCart()}
-                className="border border-black border-2 rounded-lg hover:bg-red-600 hover:text-white transition lg:w-36 w-full p-2 ml-2">
+                className="border border-black border-2 rounded-lg hover:bg-[#222c59] hover:text-white transition lg:w-36 w-full p-2 ml-2">
                 🛒 Buy Now
                 {/* </button> */}
               </Link>
@@ -393,17 +393,9 @@ function Productdetails() {
       >
         Checkout
       </Link>
-
-
-
-
-
-  
     </div>
   </div>
 </div>
-
-
       {/* Overlay */}
       {isOffCanvasOpen && (
         <div
@@ -423,13 +415,6 @@ function Productdetails() {
         shippingFees={shippingFees}
         grandTotal={grandTotal}
        className="items-center justify-center "/>
-
-
-
-
-
-
-
             <div className='mt-8 mb-4 w-96'>
               <div className='bg-blue-300 border rounded-tl-xl rounded-tr-xl flex items-center h-8 p-2 text-xl font-bold'>
                 Specification
@@ -449,13 +434,8 @@ function Productdetails() {
         </div>
         <Review />
         <StandardsinDetails />
-      </div>
-
-
-      
+      </div>      
     </>
-
-
   )
 }
 

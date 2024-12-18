@@ -30,6 +30,7 @@ function Nav() {
         { name: "PLANNERS" },
         { name: "JOURNALS" },
         { name: "CALENDARS" },
+        // { name: "OTHERS" },
         // { name: "CONTACT", link: "/Contact" },
     ];
 
@@ -146,7 +147,9 @@ function Nav() {
                                 <>
                                     <button className="hover:text-blue-400 duration-500">{link.name}</button>
                                     {openDropdown === link.name && (
-                                        <ul className="absolute left-0 py-2 w-40 -ml-6 rounded-md shadow-lg bg-white text-black z-20">
+                                        <ul className={`absolute left-0 py-2 w-40 -ml-6 rounded-md shadow-lg bg-white text-black z-20 transform transition-transform origin-top-center 
+          ${openDropdown ? 'animate-rotateY' : 'hidden'}`}
+>
                                             {link.name === "PLANNERS" && (
                                                 <>
                                                     <li>

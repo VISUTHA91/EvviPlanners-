@@ -7,7 +7,7 @@ function AdminNav() {
     <>
     {/* <nav className="bg-gray-800 text-white"> */}
     <nav className="bg-[#375E90] text-white">
-      <div className="container mx-auto flex justify-between items-center px-4 py-3">
+      <div className="container mx-auto flex justify-between items-center px-1 py-3">
         {/* Logo */}
         <div className="text-xl font-bold">
           <Link to="/admin">Admin Panel</Link>
@@ -42,7 +42,7 @@ function AdminNav() {
         </div> */}
 
         {/* Logout Button */}
-        <button
+        {/* <button
           className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition duration-300"
           onClick={() => {
             alert("Logged out");
@@ -50,7 +50,7 @@ function AdminNav() {
           }}
         >
           Logout
-        </button>
+        </button> */}
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
