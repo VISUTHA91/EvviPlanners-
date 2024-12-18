@@ -204,17 +204,13 @@ function Productdetails() {
                 className=" border border-black border-2 rounded-lg hover:bg-[#222c59] hover:text-white transition lg:w-36 p-2">
                 Add To Cart
               </button>
-              <Link to={'/payment'}
-                // onClick={() => addToCart()}
-                className="border border-black border-2 rounded-lg hover:bg-[#222c59] hover:text-white transition lg:w-36 w-full p-2 ml-2">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="border border-black border-2 rounded-lg hover:bg-[#222c59] hover:text-white transition lg:w-36  p-2">
                 🛒 Buy Now
                 {/* </button> */}
-              </Link>
+              </button>
             </div>
-
-
-
-
 <div
   className={`fixed top-0 right-0 h-screen bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
     isOffCanvasOpen ? "translate-x-0" : "translate-x-full"
@@ -415,7 +411,8 @@ function Productdetails() {
         shippingFees={shippingFees}
         grandTotal={grandTotal}
        className="items-center justify-center "/>
-            <div className='mt-8 mb-4 w-96'>
+           
+            <div className='mt-8 mb-4 lg:w-96 md:78'>
               <div className='bg-blue-300 border rounded-tl-xl rounded-tr-xl flex items-center h-8 p-2 text-xl font-bold'>
                 Specification
               </div>

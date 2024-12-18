@@ -66,6 +66,7 @@ function ProductListpage() {
           image: happystripes,
         },
       ];
+      
   return (
     <div className='flex lg:flex-row flex-col mb-10 bg-white font-PTSerif'>
     {/* <div className='lg:w-1/5'>
