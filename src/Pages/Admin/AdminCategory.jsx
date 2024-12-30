@@ -256,7 +256,7 @@ function AdminCategory() {
 
 
   return (
-    <div className='mt-8 mb-10'>
+    <div className='mt-8 mb-28'>
       <div className='flex gap-32'>
         <h1 className="text-2xl font-bold ml-2">Category Details</h1>
         <div>
@@ -269,6 +269,7 @@ function AdminCategory() {
       <div className=' lg:flex lg:flex-row sm:flex-col w-full gap-2'>
         <div className=' bg-rose'>
           {categories && (
+            
             <table
               style={{
                 backgroundColor: 'white',

@@ -26,10 +26,12 @@ function JournalCollection() {
         swipeToSlide: true,
         speed: 500,
         cssEase: "ease-in-out",
-        arrows: true,
+        arrows: false,
         lazyLoad: "ondemand",
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        autoplay: true, 
+  autoplaySpeed: 2000,
         afterChange: function (index) {
           console.log(
             `Slider Changed to: ${index + 1}, background: #222; color: #bada55`

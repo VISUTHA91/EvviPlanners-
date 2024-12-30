@@ -45,7 +45,7 @@ const ProductCreate = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white shadow-md rounded-lg p-6 max-w-5xl mx-auto mb-10"
+      className="bg-white shadow-md rounded-lg p-6 max-w-5xl mx-auto mb-20 -ml-10"
     >
       <h2 className="text-2xl font-bold text-center mb-6">Create Product</h2>
 

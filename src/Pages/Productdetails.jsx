@@ -164,7 +164,6 @@ function Productdetails() {
           </div>
           {/* LEFT Side completed */}
 
-
           {/* Right Side Start */}
           <div className=' pl-8 lg:flex-col bg-green-10'>
             <div className='flex flex-col gap-4  mr-4'>
@@ -178,16 +177,15 @@ function Productdetails() {
               <div className='text-l'>Price Inclusive all Taxes</div>
             </div>
 
-            {/* Quantity */}
 
+            {/* Quantity */}
             <div className="flex mt-4 items-center">
               <label htmlFor="qty" className="mr-2 font-bold">Quantity:</label>
               <select
                 id="qty"
                 className="p-1 border border-black rounded text-center bg-transparent"
                 value={qty}
-                onChange={handleQuantityChange}
-              >
+                onChange={handleQuantityChange}>
                 {[...Array(10).keys()].map((num) => (
                   <option key={num + 1} value={num + 1}>
                     {num + 1}
@@ -197,7 +195,7 @@ function Productdetails() {
             </div>
 
             {/* Button Section */}
-            <div className=' mt-8 flex flex-col lg:flex-row  gap-8 '>
+            <div className='mt-8 flex flex-col lg:flex-row  gap-8 '>
               <button
                 onClick={() => addToCart()}
                 // onClick={() => buyNow()}
@@ -214,8 +212,7 @@ function Productdetails() {
 <div
   className={`fixed top-0 right-0 h-screen bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
     isOffCanvasOpen ? "translate-x-0" : "translate-x-full"
-  } w-2/6 z-50`}
->
+  } w-2/6 z-50`}>
   {/* Header */}
   <div className="flex justify-between items-center p-3 border-b border-gray-300">
     <h2 className="text-xl text-gray-800">Your Cart</h2>
@@ -377,16 +374,14 @@ function Productdetails() {
     <div className="mt-6 flex gap-4">
       <Link
         to="/Cart"
-        className="w-1/2 text-center border border-[#375E90] bg-white py-3 rounded-lg hover:bg-[#222c59] hover:text-white shadow-md"
-      >
+        className="w-1/2 text-center border border-[#375E90] bg-white py-3 rounded-lg hover:bg-[#222c59] hover:text-white shadow-md">
         View Cart
       </Link>
       <Link
         onClick={() => setIsModalOpen(true)}
         // to="/checkout"
         // className="w-1/2 text-center bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 shadow-md"
-        className="w-1/2 text-center bg-[#375E90] text-white py-3 rounded-lg hover:bg-[#222c59] shadow-md"
-      >
+        className="w-1/2 text-center bg-[#375E90] text-white py-3 rounded-lg hover:bg-[#222c59] shadow-md">
         Checkout
       </Link>
     </div>
@@ -399,9 +394,6 @@ function Productdetails() {
           className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40"
         ></div>
       )}
-
-
-
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -411,7 +403,6 @@ function Productdetails() {
         shippingFees={shippingFees}
         grandTotal={grandTotal}
        className="items-center justify-center "/>
-           
             <div className='mt-8 mb-4 lg:w-96 md:78'>
               <div className='bg-blue-300 border rounded-tl-xl rounded-tr-xl flex items-center h-8 p-2 text-xl font-bold'>
                 Specification
@@ -435,7 +426,6 @@ function Productdetails() {
     </>
   )
 }
-
 export default Productdetails
 
 {/* <ZoomImage imgSrc={activeImage ? activeImage : `${API_BASE_URL}${product.images[0]}`} /> */ }

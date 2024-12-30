@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 // import { getCartItems , deleteItem } from "../api/apiServices";
 // import { API_BASE_URL } from "../api/apiServices";
 import { MdDeleteForever } from "react-icons/md";
+import Modal from "../Components/Modal";
 // import { updateCartItemQuantity } from "../api/apiServices";
 
 
@@ -11,9 +12,17 @@ function Cart() {
   const [cartItems, setCartItems] = useState([]); // Default as an empty array
   const [loading, setLoading] = useState(true);   // Add loading state
   const [error, setError] = useState(null);       // Add error state
-  const [cartId, setCartId] = useState([]);       // Add error state
+  const [cartId, setCartId] = useState([]); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+        const [currentStep, setCurrentStep] = useState(1);
+        
+          const handleStepChange = (step) => {
+            setCurrentStep(step);
+          };
 
-  const shippingFee = 0;
+  // const shippingFee = 0;
+  const shippingFee = 200; // Example value
+
 
   // useEffect(() => {
   //   const fetchCartItems = async () => {
@@ -55,6 +64,12 @@ function Cart() {
     };
     fetchCartItems();
   }, []);
+
+
+  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const grandTotal = subtotal + shippingFee;
+
+
   
 
 
@@ -142,7 +157,7 @@ const calculateGrandTotal = () => {
 const grandTotal = calculateGrandTotal();
 console.log("cartPage",grandTotal)
     // Invoke the function to get the total price
-    navigate('/payment', {state: {totalPrice , grandTotal}});
+    navigate('/Modal', {state: {totalPrice , grandTotal}});
   };
 
   if (loading) {
@@ -329,7 +344,9 @@ console.log("cartPage",grandTotal)
 
     <div className="mt-6 text-right">
       <button
-        onClick={handleProceedToPayment}
+        // onClick={handleProceedToPayment}
+        onClick={() => setIsModalOpen(true)}
+
         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow transform transition-transform hover:scale-105"
       >
         Proceed to Buy
@@ -337,6 +354,15 @@ console.log("cartPage",grandTotal)
     </div>
   </div>
 )}
+ <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        currentStep={currentStep}
+        handleStepChange={handleStepChange}
+        subtotal={subtotal}
+        shippingFees={shippingFee}
+        grandTotal={grandTotal}
+       className="items-center justify-center "/>
 </div> 
 
 

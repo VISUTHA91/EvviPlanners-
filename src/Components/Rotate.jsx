@@ -53,11 +53,16 @@ function Rotate() {
         
         {/* Rotating Image */}
         <div className="relative z-10">
-          <img
+          {/* <img
             className="rotating w-32 h-48 md:w-48 md:h-64 lg:w-62 lg:h-96 animate-spin-custom ml-0 md:ml-6 lg:ml-12 mt-12 lg:mt-24"
             alt="Rotating Icon"
             src={plannerslk}
-          />
+          /> */}
+     <img
+  className="w-32 h-48 md:w-48 md:h-64 lg:w-64 lg:h-96 animate-spin-custom ml-0 md:ml-6 lg:ml-12 mt-12 lg:mt-24"
+  alt="Rotating Icon"
+  src={plannerslk}
+/>
         </div>
       </div>
     </div>

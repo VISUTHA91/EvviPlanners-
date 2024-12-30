@@ -23,12 +23,15 @@ export default {
     },
 
      animation: {
-      "spin-custom": "spinCustom 30s linear infinite",
+      'spin-custom': 'spinCustom 30s linear infinite',
       'bounce-out': 'bounce-out 0.5s ease-out forwards',
      ' flash': 'flash 1s infinite',
     },
     keyframes: {
-      spinCustom: {"100%": { transform: "rotate(360deg)" }},
+      spinCustom: {
+        '0%': { transform: 'rotate(0deg)' },
+        "100%": { transform: "rotate(360deg)" }
+      },
       'bounce-out': {
         '0%': { transform: 'scale(1)', opacity: '1' },
         '20%': { transform: 'scale(1.1)', opacity: '1' },

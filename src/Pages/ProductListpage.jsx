@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState , useEffect } from 'react';
 import ProductCard from '../Components/ProductCard';
 import { bigdreams,
 biggoals,
@@ -13,8 +14,17 @@ magicisevery,
 flowers,
 blackfloral,
 floral } from '../assets/Image';
+import {Watch} from 'react-loader-spinner'
+
 
 function ProductListpage() {
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000); // Simulate loading for 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
     const products = [
         {
             id:1,
@@ -82,7 +92,21 @@ function ProductListpage() {
         categoryId = {categoryId}
       />
     </div> */}
-    <div className='md:mx-aut w-full sm:w-full sm:ml-6 bg-rose-10 mt-4 '>
+     {loading ? ( 
+    <div className='flex mb-16 w-full mt-20  justify-center items-center '>
+      <Watch
+  visible={true}
+  height="80"
+  width="80"
+  radius="48"
+  color="#375E90"
+  ariaLabel="watch-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+     </div>
+        ):(
+    <div className='md:mx-aut w-full sm:w-full sm:ml-6 mt-4 '>
       <div className='flex justify-center items-center w-full p-4 mr-'>
         <h2 className='text-4xl lg:max-w-lg font-bold'> Our Products</h2>
       </div>
@@ -98,6 +122,7 @@ function ProductListpage() {
         )}
       </div>
     </div>
+        )}
   </div>
   )
 }

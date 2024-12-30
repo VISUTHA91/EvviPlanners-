@@ -6,8 +6,8 @@ import AdminNav from '../Components/AdminNav';
 function AdminLayout() {
     return (
         <>
-        <AdminNav />
-            <Outlet />
+        {/* <AdminNav /> */}
+        <Outlet />
         </>
     )
 }

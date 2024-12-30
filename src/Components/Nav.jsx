@@ -207,7 +207,7 @@ function Nav() {
                         </li>
                     ))}
                 </ul>
-                <div className="flex  items-center text-white justify-between gap-2 lg:gap-6 mr-10">
+                <div className="flex  items-center justify-between gap-2 lg:gap-6 mr-10">
                     {/* Search Bar */}
                     <div className="relative flex items-center w-full max-w-xs">
                         <input

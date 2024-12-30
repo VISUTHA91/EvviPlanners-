@@ -202,7 +202,7 @@ const Modal = ({ isOpen, onClose, handleStepChange, subtotal, shippingFees, gran
 
             {!orderCompleted ? (
         <div className="p-8 bg-white shadow-lg rounded-lg text-center">
-          <h2 className="text-2xl font-bold text-gray-800">Confirm Payment</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Confirm To Pay</h2>
           <p className="text-gray-600 mt-4">
             Please click the button below to complete your order.
           </p>
