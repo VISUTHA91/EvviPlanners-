@@ -93,7 +93,7 @@ function PlannerCollection() {
           borderRadius: "50%",
           zIndex: 1,
           cursor: "pointer",
-          marginLeft: "8px",
+          marginLeft: "20px",
         }}
         onClick={onClick}
       ></div>
@@ -157,12 +157,13 @@ function PlannerCollection() {
     {/* Product Slider Section */}
     {products && (
       <Slider
-        className="flex flex-wrap gap-4 sm:gap-6 justify-center w-full items-center p-4"
+        className="flex flex-wrap gap-4 sm:gap-6 sm:ml-8 justify-center w-full items-center p-4"
         {...settings}>
         {products.map((product, index) => (
           <div
             key={index}
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mt-4"
+            // className="w-full sm:w-1/3  sm:-mr-10 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mt-4"
+            className="px-8 sm:-ml-10"
           >
             <ProductCard
               image={product.image}

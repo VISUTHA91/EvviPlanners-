@@ -48,7 +48,6 @@ function MainContent() {
 
   return (
   
-  
     <div className="flex-grow p-2">
     <h1 className="text-3xl font-semibold mb-8">Dashboard</h1>
 

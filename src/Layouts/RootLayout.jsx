@@ -7,7 +7,7 @@ function RootLayout() {
   return (
     <>
     <Nav />
-    <div className="pt-16"> {/* Adjust this based on the height of your Nav */}
+    <div className="pt-16">
     <Outlet />
     </div>
     <Footer />

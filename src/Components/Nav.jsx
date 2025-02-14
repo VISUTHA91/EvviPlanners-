@@ -50,7 +50,7 @@ function Nav() {
                 setIsAboutDropdownOpen(false);
             }
         }
-
+        
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
@@ -58,7 +58,7 @@ function Nav() {
     }, [userDropdownRef]);
     return (
         <>
-            <nav className='p-3 fixed w-full flex justify-between items-center shadow-lg z-40 transition-colors duration-500 text-black md:w-auto lg:w-full font-PTSerif bg-white'>
+            <nav className='p-3 fixed w-full flex justify-between items-center shadow-lg z-40 transition-colors duration-500 text-black md:w-auto lg:w-full font-PTSerif bg-white '>
                 {/* Logo */}
                 <div className="font-bold text-black text-2xl cursor-pointer ml-2 flex items-center gap-1">
                     <Link to={'/'}> <p><span className=''>Evvi</span> </p></Link>

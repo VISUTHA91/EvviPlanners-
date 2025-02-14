@@ -15,7 +15,9 @@ import ScrollToTop from './Components/ScrollToTop'
 import Cart from './Pages/Cart'
 import AdminCategory from './Pages/Admin/AdminCategory'
 import MainContent from './Pages/Admin/MainContent'
-
+import Contact from './Pages/Contact'
+import Faq from './Pages/Faq'
+import Support from './Pages/Support'
 
 function App() {
 
@@ -55,6 +57,9 @@ function App() {
       <Route path='/ProductList/:name' element={<ProductListpage />} />
       <Route path='/Productdetails/:name' element={<Productdetails />} />
       <Route path='/Cart' element={<Cart />} />
+      <Route path='/Contact'element={<Contact /> }/>
+      <Route path='/Faq'element={<Faq /> }/>
+      <Route path='/support'element={<Support /> }/>
     </Route>
 
     {/* Dashboard Layout */}

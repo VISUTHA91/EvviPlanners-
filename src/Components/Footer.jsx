@@ -57,7 +57,7 @@ function Footer() {
         <h3 className="text-xl font-bold mb-4">Support</h3>
         <ul>
           <li className="mb-2">
-            <Link to={"/Support"} className="hover:underline">
+            <Link to={"/Faq"} className="hover:underline">
               FAQ
             </Link>
           </li>
@@ -67,12 +67,12 @@ function Footer() {
             </Link>
           </li> */}
           <li className="mb-2">
-            <Link to={"/Support"} className="hover:underline">
+            <Link to={"/support"} className="hover:underline">
               Terms & Conditions
             </Link>
           </li>
           <li className="mb-2">
-            <Link to={"/Support"} className="hover:underline">
+            <Link to={"/support"} className="hover:underline">
               Privacy Policy
             </Link>
           </li>

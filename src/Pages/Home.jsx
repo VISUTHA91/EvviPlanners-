@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
     <Carosel  />
-    <Rotate />
+    {/* <Rotate /> */}
     <PlannerCollection />
 <CallendarCollection />
 <JournalCollection />
