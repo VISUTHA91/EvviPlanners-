@@ -133,6 +133,7 @@
 import React, { useState } from 'react';
 import Modal from '../../Components/OrderModal';
 import { jsPDF } from 'jspdf'; // Import jsPDF library for PDF generation
+import { bigdreams, bigfloralgarden, biggoals, floral, floralparadise } from '../../assets/Image';
 
 const orders = [
   {
@@ -172,61 +173,61 @@ const orders = [
     ],
   },
   {
-    orderId: '123485',
+    orderId: '147885',
     date: '2024-10-23',
     customerName:"John",
     numberofItems:"5",
     status: 'Delivered',
     total: '₹500',
     products: [
-      { name: 'Product 7', imageUrl: 'https://via.placeholder.com/100', price: '₹350' },
-      { name: 'Product 8', imageUrl: 'https://via.placeholder.com/100', price: '₹580' },
-      { name: 'Product 9', imageUrl: 'https://via.placeholder.com/100', price: '₹300' },
-      { name: 'Product 4', imageUrl: 'https://via.placeholder.com/100', price: '₹850' },
-      { name: 'Product 5', imageUrl: 'https://via.placeholder.com/100', price: '₹150' },
+      { name: 'Product 7', imageUrl: bigdreams, price: '₹350' },
+      { name: 'Product 8', imageUrl: bigfloralgarden, price: '₹580' },
+      { name: 'Product 9', imageUrl: floralparadise, price: '₹300' },
+      { name: 'Product 4', imageUrl: floral, price: '₹850' },
+      { name: 'Product 5', imageUrl: biggoals, price: '₹150' },
     ],
   },
   {
-    orderId: '123485',
+    orderId: '2478485',
     date: '2024-10-23',
     customerName:"John",
     numberofItems:"8",
     status: 'Delivered',
     total: '₹500',
     products: [
-      { name: 'Product 4', imageUrl: 'https://via.placeholder.com/100', price: '₹190' },
-      { name: 'Product 5', imageUrl: 'https://via.placeholder.com/100', price: '₹1750' },
-      { name: 'Product 6', imageUrl: 'https://via.placeholder.com/100', price: '₹1550' },
-      { name: 'Product 7', imageUrl: 'https://via.placeholder.com/100', price: '₹100' },
-      { name: 'Product 8', imageUrl: 'https://via.placeholder.com/100', price: '₹150' },
-      { name: 'Product 9', imageUrl: 'https://via.placeholder.com/100', price: '₹960' },
-      { name: 'Product 10', imageUrl: 'https://via.placeholder.com/100', price: '₹150' },
-      { name: 'Product 11', imageUrl: 'https://via.placeholder.com/100', price: '₹850' },
+      { name: 'Product 4', imageUrl: bigdreams, price: '₹190' },
+      { name: 'Product 5', imageUrl: bigfloralgarden, price: '₹1750' },
+      { name: 'Product 6', imageUrl: floralparadise, price: '₹1550' },
+      { name: 'Product 7', imageUrl: floralparadise, price: '₹100' },
+      { name: 'Product 8', imageUrl: bigdreams, price: '₹150' },
+      // { name: 'Product 9', imageUrl: bigfloralgarden, price: '₹960' },
+      // { name: 'Product 10', imageUrl: bigdreams, price: '₹150' },
+      // { name: 'Product 11', imageUrl: 'https://via.placeholder.com/100', price: '₹850' },
     ],
   },
   {
-    orderId: '123485',
+    orderId: '1247885',
     date: '2024-10-23',
     customerName:"John",
     numberofItems:"3",
     status: 'Delivered',
     total: '₹500',
     products: [
-      { name: 'Product 4', imageUrl: 'https://via.placeholder.com/100', price: '₹350' },
-      { name: 'Product 5', imageUrl: 'https://via.placeholder.com/100', price: '₹150' },
-      { name: 'Product 5', imageUrl: 'https://via.placeholder.com/100', price: '₹850' },
+      { name: 'Product 4', imageUrl: 'bigfloralgarden', price: '₹350' },
+      { name: 'Product 5', imageUrl: bigdreams, price: '₹150' },
+      { name: 'Product 5', imageUrl: floralparadise, price: '₹850' },
     ],
   },
   {
-    orderId: '123485',
+    orderId: '357885',
     date: '2024-10-23',
     customerName:"John",
     numberofItems:"5",
     status: 'Delivered',
     total: '₹500',
     products: [
-      { name: 'Product 4', imageUrl: 'https://via.placeholder.com/100', price: '₹350' },
-      { name: 'Product 5', imageUrl: 'https://via.placeholder.com/100', price: '₹150' },
+      { name: 'Product 4', imageUrl: bigdreams, price: '₹350' },
+      { name: 'Product 5', imageUrl: bigfloralgarden, price: '₹150' },
     ],
   },
 ];

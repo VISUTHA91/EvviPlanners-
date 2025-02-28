@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { lushforest, lushforest1, three, four, five, six, seven, flowersinblue ,flowers1} from '../assets/Image';
+import { lushforest, lushforest1, three, four, five, six, seven,bigfloralgarden, flowersinblue ,flowers1, floralparadise, bigdreams} from '../assets/Image';
 import StandardsinDetails from '../Components/StandardsinDetails';
 import Modal from '../Components/Modal';
 import Review from '../Components/Review';
+// import {bigfloralgarden } from '../assets/Image';
 const product = {
   id: 1,
   name: "Planners",
@@ -39,9 +40,9 @@ function Productdetails() {
 
 
   const [cart, setCart] = useState([
-    { name: "Undated Planner", price: 500, quantity: 2 ,  "image": "https://via.placeholder.com/150"    },
-    { name: "Journal", price: 1200, quantity: 1,  "image": "https://via.placeholder.com/150"    },
-    { name: "Calendar", price: 300, quantity: 1 ,  "image": "https://via.placeholder.com/150"    },
+    { name: "Undated Planner", price: 500, quantity: 2 ,  "image": bigdreams  },
+    { name: "Journal", price: 1200, quantity: 1,  "image": floralparadise   },
+    { name: "Calendar", price: 300, quantity: 1 ,  "image": bigfloralgarden   },
   ]);
 
 

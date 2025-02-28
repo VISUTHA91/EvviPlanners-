@@ -26,28 +26,13 @@ function AdminProductList() {
     const [categories, setCategories] = useState([]); // Store categories
     const [selectedCategory, setSelectedCategory] = useState({ id: "", name: "" });
 
-    // Fetch product list from the server  
-    // useEffect(() => {
-    //   const fetchProductList = async () => {
-    //     try {
-    //       const response = await getallProducts(); // Fetch products from backend
-    //       setProductlist(response.products); // Store fetched products
-    //       // console.log("2525252525",response)
-    //     } catch (error) {
-    //       console.error('Error fetching products:', error);
-    //     }
-    //   };
-    //   fetchProductList(); // Fetch the product list when the component mounts
-    // },[]);
-
-    // console.log("Fetched Data", productlist);
 
     const productlist = [
         {
             id:1,
           name: "Planners",
           price: 1000,
-          quantity: 750,
+          quantity: 150,
           category:'Planners',
           image: [bigdreams]
         },
@@ -55,7 +40,7 @@ function AdminProductList() {
             id:2,
           name: "DatedPlanner",
           price: 1000,
-          quantity: 900,
+          quantity: 600,
           category:'Planners',
 
           image: [biggoals]
@@ -64,7 +49,7 @@ function AdminProductList() {
             id:3,
           name: "FloralPrint",
           price: 2000,
-          quantity: 1500,
+          quantity: 150,
           category:'Planners',
 
           image:[ bigfloralgarden]
@@ -73,7 +58,7 @@ function AdminProductList() {
             id:4,
           name: "Big Dreams",
           price: 800,
-          quantity: 700,
+          quantity: 70,
           category:'Planners',
 
           image: [busyatwork]
@@ -82,7 +67,7 @@ function AdminProductList() {
             id:5,
           name: "Black Floral",
           price: 2000,
-          quantity: 1500,
+          quantity: 150,
           category:'Planners',
 
           image:[ floralparadise]
@@ -91,7 +76,7 @@ function AdminProductList() {
             id:6,
           name: "Marble Maze",
           price: 1400,
-          quantity: 1200,
+          quantity: 120,
           category:'calendar',
 
           image: [flowersinblue]
@@ -100,7 +85,7 @@ function AdminProductList() {
             id:7,
           name: "LushForest",
           price: 2500,
-          quantity: 2000,
+          quantity: 20,
           category:'Journals',
           image: [happystripes]
         },
@@ -108,68 +93,7 @@ function AdminProductList() {
 
 
     return (
-            // <div className=' border-black mt-12 mr-8'>
-            //     <h1 className="text-2xl font-bold mb-4">Product Details</h1>
-            //     <div className='w-full'>
-            //         {/* {productlist && productlist.length > 0 ? ( */}
-            //         {productlist?.length > 0 ? (
-
-            //             <table className="w-full bg-white border-collapse border  rounded-2xl border-gray-200">
-            //                 <thead className='border  border-black rounded-2xl'>
-            //                     <tr className="bg-gray-100 border rounded-xl">
-            //                         <th className="py-2 px-4 border rounded">Image</th>
-            //                         <th className="py-2 px-4 border">Name</th>
-            //                         {/* <th className="py-2 px-4 border">Category</th> */}
-            //                         <th className="py-2 px-4 border">Price</th>
-            //                         <th className="py-2 px-4 border">Quantity</th>
-            //                         {/* <th className="py-2 px-4 border">Quantity</th> */}
-            //                         <th className="py-2 px-4 border">Action</th>
-            //                     </tr>
-            //                 </thead>
-            //                 <tbody>
-            //                     {productlist?.map((productlist) => (
-            //                         <tr key={productlist.id} className="hover:bg-gray-50">
-            //                             <td className=" border">
-            //                                 {/* {productlist.image.slice(0, 5).map((image, index) => ( */}
-
-            //                                     <img
-            //                                         // key={index}
-            //                                         // src={`http://192.168.20.5:3000/${image}`}
-            //                                         src={productlist.image}
-            //                                         // alt={`Product Image ${index + 1}`}
-            //                                         height="25"
-            //                                         width="30"
-            //                                     />
-            //                                 {/* ))} */}
-            //                             </td>
-            //                             <td className=" border">{productlist.name}</td>
-            //                             {/* <td className="py-2 px-4 border">{productlist.category_id.name}</td> */}
-            //                             <td className=" border">{productlist.price}</td>
-            //                             {/* <td className="py-2 px-4 border">{product.size}</td> */}
-            //                             <td className=" border">{productlist.quantity}</td>
-            //                             <td className="">
-            //                                 <button
-            //                                     className="text-white bg-red-500 hover:bg-red-600 justify-center items-center rounded"
-            //                                     // Add delete functionality if needed
-            //                                     onClick={() => {
-            //                                         handleDelete(product._id);
-            //                                     }}
-            //                                 >
-            //                                     <MdDeleteForever size={24} />
-            //                                 </button>
-                                       
-            //                             </td>
-            //                         </tr>
-            //                     ))}
-            //                 </tbody>
-            //             </table>
-            //         ) : (
-            //             <p>No products available</p>
-            //         )}
-            //     </div>
-            // </div>
-
-            <div className="border-black mt-1 mr-4 bg-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
+                        <div className="border-black mr-4 bg-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)] h-screen overflow-y-auto scroll-hidden">
   <h1 className="text-2xl font-bold mb-4">Product Details</h1>
   <div className="w-full">
     {productlist?.length > 0 ? (
@@ -202,7 +126,13 @@ function AdminProductList() {
               <div className="flex-1 px-4 py-2">{product.category}</div>
               <div className="flex-1 px-4 py-2">₹{product.price}</div>
               <div className="flex-1 px-4 py-2">{product.quantity}</div>
-              <div className="flex-1 px-4 py-2">
+              <div className="flex px-4 py-2 gap-2">
+                 <button
+                      className="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded"
+                      onClick={() => handleShowEdit(product)}
+                    >
+                      <MdEdit size={20} />
+                    </button>
                 <button
                   className="text-white bg-red-500 hover:bg-red-600 rounded p-2"
                   onClick={() => handleDelete(product.id)}
@@ -226,9 +156,22 @@ function AdminProductList() {
 export default AdminProductList
 
 
-     {/* <button
-                      className="text-white bg-blue-500 hover:bg-blue-600 px-2 py-1 rounded"
-                      onClick={() => handleShowEdit(product)}
-                    >
-                      <MdEdit size={24} />
-                    </button> */}
+    
+
+
+                    
+    // Fetch product list from the server  
+    // useEffect(() => {
+    //   const fetchProductList = async () => {
+    //     try {
+    //       const response = await getallProducts(); // Fetch products from backend
+    //       setProductlist(response.products); // Store fetched products
+    //       // console.log("2525252525",response)
+    //     } catch (error) {
+    //       console.error('Error fetching products:', error);
+    //     }
+    //   };
+    //   fetchProductList(); // Fetch the product list when the component mounts
+    // },[]);
+
+    // console.log("Fetched Data", productlist);

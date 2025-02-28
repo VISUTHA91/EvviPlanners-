@@ -18,6 +18,8 @@ import MainContent from './Pages/Admin/MainContent'
 import Contact from './Pages/Contact'
 import Faq from './Pages/Faq'
 import Support from './Pages/Support'
+import StockReport from './Pages/Admin/StockReport'
+import SalesReport from './Pages/Admin/SalesReport'
 
 function App() {
 
@@ -70,6 +72,8 @@ function App() {
       <Route path="ProductCreate" element={<ProductCreate />} />
       <Route path="AdminProductList" element={<AdminProductList />} />
       <Route path="AdminOrders" element={<AdminOrders />} />
+      <Route path="StockReport" element={<StockReport/>} />
+      <Route path="SalesReport" element={<SalesReport/>} />
       <Route path="Userlist" element={<Userlist />} />
     </Route>
 

@@ -13,12 +13,8 @@
 // import { MdReviews } from "react-icons/md";
 // import { TbLogout2 } from "react-icons/tb";
 // import ProductCreate from './ProductCreate';
-
-
 // function AdminDashboard() {
-
 //     const [currentPage, setCurrentPage] = useState('Maincontent');
-
 //   const renderPageContent = () => {
 //     switch (currentPage) {
 //       case 'Maincontent':
@@ -37,8 +33,7 @@
 //         return <h2>Page not found</h2>;
 //     }
 //   };
-//   return (
-  
+//   return ( 
 //      <div className="flex items-stretch">
 //       {/* Side Content */}
 //       <div className="w-58 bg-white shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)]">
@@ -129,7 +124,6 @@
 //     </div>    
 //   )
 // }
-
 // export default AdminDashboard
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -146,7 +140,7 @@ function AdminDashboard() {
       <div className="w-58 bg-white ">
       {/* shadow-[-2px_6px_16px_17px_rgba(0,_0,_0,_0.2)] */}
         <div className="w-64 bg-white p-4">
-          <ul className="space-y-6">
+          <ul className="space-y-2">
             {/* Dashboard */}
             <li>
               <NavLink
@@ -217,6 +211,32 @@ function AdminDashboard() {
                 Orders
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="StockReport"
+                className={({ isActive }) =>
+                  `flex items-center gap-4 w-full p-2 text-lg font-semibold rounded-lg transition duration-200 ${
+                    isActive ? "bg-blue-100 text-blue-800" : "text-blue-600 hover:bg-blue-100 hover:text-blue-800"
+                  }`
+                }
+              >
+                <FaFirstOrder className="text-2xl" />
+                Stock Report
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="SalesReport"
+                className={({ isActive }) =>
+                  `flex items-center gap-4 w-full p-2 text-lg font-semibold rounded-lg transition duration-200 ${
+                    isActive ? "bg-blue-100 text-blue-800" : "text-blue-600 hover:bg-blue-100 hover:text-blue-800"
+                  }`
+                }
+              >
+                <FaFirstOrder className="text-2xl" />
+                Sales Report
+              </NavLink>
+            </li>
             {/* Customers */}
             <li>
               <NavLink
@@ -233,53 +253,25 @@ function AdminDashboard() {
             </li>
             {/* Logout */}
             <li>
-              <button
+              <NavLink
+              to="/Home"
                 className="flex items-center gap-4 w-full p-2 text-lg font-semibold text-blue-600 rounded-lg hover:bg-blue-100 hover:text-blue-800 transition duration-200"
               >
                 <TbLogout2 className="text-2xl" />
                 Log Out
-              </button>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
       {/* Main Content */}
-      <div className="mt-10 ml-16 flex-1">
+      <div className="mt- ml-16 flex-1">
         <Outlet />
       </div>
     </div>
   );
 }
-
 export default AdminDashboard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {/* <div className="w-64 h-screen bg-yellow-600 p-6 text-white">
   <ul className="space-y-6">

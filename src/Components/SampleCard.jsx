@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function SampleCard({ image,name, price, offerPrice }) {
   return (
+     <Link 
+        to={`/Productdetails/${name}`}>
     <div className="min-h-screen flex justify-center items-center font-PTSerif">
 
 
@@ -44,6 +47,7 @@ function SampleCard({ image,name, price, offerPrice }) {
       </div>
     </div>
 </div>
+</Link>
   )
 }
 

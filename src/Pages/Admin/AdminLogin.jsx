@@ -4,6 +4,8 @@ import { MdEmail } from "react-icons/md";
 import { FaUnlock } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
  const user ={
     email:"admin@mail.com",
@@ -17,6 +19,8 @@ function AdminLogin() {
       });
     
       const navigate = useNavigate()
+      const [showPassword, setShowPassword] = useState(false);
+
     
       const handleChange = (e) => {
         setUser({
@@ -78,7 +82,7 @@ function AdminLogin() {
             </div>
 
             {/* Password Input */}
-            <div className="relative">
+            {/* <div className="relative">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                 <FaUnlock className="text-gray-400" />
               </span>
@@ -91,7 +95,28 @@ function AdminLogin() {
                 className="w-full pl-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
-            </div>
+            </div> */}
+            <div className="relative">
+      <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+        <FaUnlock className="text-gray-400" />
+      </span>
+      <input
+        type={showPassword ? "text" : "password"}
+        name="password"
+        value={user.password}
+        onChange={handleChange}
+        placeholder="Password"
+        className="w-full pl-10 pr-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      />
+      <button
+        type="button"
+        onClick={() => setShowPassword(!showPassword)}
+        className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"
+      >
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </button>
+    </div>
 
             {/* Submit Button */}
             <button

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 // import { API_BASE_URL } from "../api/apiServices";
 import { MdDeleteForever } from "react-icons/md";
 import Modal from "../Components/Modal";
+import { bigdreams, floralparadise ,bigfloralgarden} from "../assets/Image";
 // import { updateCartItemQuantity } from "../api/apiServices";
 
 
@@ -46,9 +47,9 @@ function Cart() {
         const data = {
           cart: {
             items: [
-              { name: "Undated Planner", price: 500, quantity: 2, image: "https://via.placeholder.com/150" },
-              { name: "Journal", price: 1200, quantity: 1, image: "https://via.placeholder.com/150" },
-              { name: "Calendar", price: 300, quantity: 1, image: "https://via.placeholder.com/150" },
+              { name: "Undated Planner", price: 500, quantity: 2, image: floralparadise },
+              { name: "Journal", price: 1200, quantity: 1, image: bigdreams },
+              { name: "Calendar", price: 300, quantity: 1, image: bigfloralgarden },
             ],
             _id: "123456789", // Example cart ID
           },

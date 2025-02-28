@@ -83,6 +83,8 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 const colors = [
   "bg-red-100",
   "bg-blue-100",
@@ -102,7 +104,8 @@ function JournalCard({ image,name, price, offerPrice }) {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
   return (
-    <>
+     <Link 
+        to={`/Productdetails/${name}`}>
     <div className={`flex justify-center items-center border rounded font-PTSerif h-68 ${randomColor}`}>
     {/* <div className={'flex justify-center items-center border rounded h-68' }> */}
       <div className="relative w-80 h-[300px] overflow-hidden group">
@@ -173,7 +176,7 @@ function JournalCard({ image,name, price, offerPrice }) {
         </div>
       </div>
     </div>
-      </>
+    </Link>
   )
 }
 
